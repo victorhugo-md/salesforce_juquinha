@@ -1,0 +1,4 @@
+C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.Home.resources
+C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.Properties.Resources.resources
+C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.View.FormCostumers.resources
+C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.csproj.GenerateResource.cache
