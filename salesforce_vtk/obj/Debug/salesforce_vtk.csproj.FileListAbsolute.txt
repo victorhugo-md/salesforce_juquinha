@@ -2,3 +2,16 @@ C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\
 C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.Properties.Resources.resources
 C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.View.FormCostumers.resources
 C:\Users\vmagni.FOURSYS\source\repos\salesforce_vtk_solution\salesforce_vtk\obj\Debug\salesforce_vtk.csproj.GenerateResource.cache
+C:\Projects\salesforce_juquinha\salesforce_vtk\bin\Debug\salesforce_vtk.exe.config
+C:\Projects\salesforce_juquinha\salesforce_vtk\bin\Debug\salesforce_vtk.exe
+C:\Projects\salesforce_juquinha\salesforce_vtk\bin\Debug\salesforce_vtk.pdb
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.csprojResolveAssemblyReference.cache
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.Home.resources
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.Properties.Resources.resources
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.View.FormCostumers.resources
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.View.FormProducts.resources
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.View.FormSales.resources
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.csproj.GenerateResource.cache
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.csproj.CoreCompileInputs.cache
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.exe
+C:\Projects\salesforce_juquinha\salesforce_vtk\obj\Debug\salesforce_vtk.pdb

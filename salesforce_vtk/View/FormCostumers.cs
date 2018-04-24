@@ -1,4 +1,5 @@
 ﻿using salesforce_vtk.Controller;
+using salesforce_vtk.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ namespace salesforce_vtk.View
     public partial class FormCostumers : Form
     {
         UtillityController controller;
+        Costumer costumer;
         public FormCostumers()
         {
             InitializeComponent();
@@ -32,10 +34,25 @@ namespace salesforce_vtk.View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (validateFields())
+            {
+                if (costumer == null)
+                {
+                    costumer = new Costumer();
+                }
 
+                costumer.name = txtName.Text;
+                costumer.address = txtAddress.Text;
+                costumer.reference = txtReference.Text;
+                costumer.contact = txtContact.Text;
+
+                /*if(dao.insert(costumer)){
+                 * 
+                }*/
+            }
         }
 
-        private void clear()
+        private void clearForm()
         {
             controller.clearFields(this.Controls);
             txtName.Focus();
@@ -45,26 +62,54 @@ namespace salesforce_vtk.View
         {
             if (e.KeyCode == Keys.Escape)
             {
-                exit();
-            }
-            else if (e.KeyCode == Keys.Enter)
-            {
-                if (validateFields())
+                if((txtName.Text.Trim().Length > 0) || (txtAddress.Text.Trim().Length > 0) || (txtContact.Text.Trim().Length > 0))
                 {
-                    clear();
+                    if(MessageBox.Show("Deseja realmente cancelar cadastro?","Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        clearForm();
+                    }
+                }
+                else
+                {
+                    exit();
                 }
             }
         }
 
         private bool validateFields()
         {
-            return true;
+            notify.Clear();
+            if (txtName.Text.Trim().Length < 5)
+            {
+                notify.SetError(txtName, "Nome inválido!");
+                return false;
+            }
+            else if (txtAddress.Text.Trim().Length < 10)
+            {
+                notify.SetError(txtAddress, "Endereço inválido!");
+                return false;
+            }
+            else if (txtContact.Text.Trim().Length < 10)
+            {
+                notify.SetError(txtContact, "Contato inválido!");
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void exit()
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+
+        private void FormCostumers_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

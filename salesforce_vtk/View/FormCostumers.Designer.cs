@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -38,6 +39,8 @@
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbReference = new System.Windows.Forms.Label();
             this.lbContact = new System.Windows.Forms.Label();
+            this.notify = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.notify)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBack
@@ -64,13 +67,13 @@
             this.txtAddress.Location = new System.Drawing.Point(38, 118);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(211, 46);
+            this.txtAddress.Size = new System.Drawing.Size(211, 52);
             this.txtAddress.TabIndex = 1;
             this.txtAddress.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCostumers_KeyDown);
             // 
             // txtReference
             // 
-            this.txtReference.Location = new System.Drawing.Point(38, 186);
+            this.txtReference.Location = new System.Drawing.Point(38, 194);
             this.txtReference.Multiline = true;
             this.txtReference.Name = "txtReference";
             this.txtReference.Size = new System.Drawing.Size(211, 52);
@@ -79,7 +82,7 @@
             // 
             // txtContact
             // 
-            this.txtContact.Location = new System.Drawing.Point(38, 270);
+            this.txtContact.Location = new System.Drawing.Point(38, 278);
             this.txtContact.Multiline = true;
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(211, 76);
@@ -88,13 +91,14 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(84, 361);
+            this.btnSave.Location = new System.Drawing.Point(84, 369);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(111, 35);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Salvar";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCostumers_KeyDown);
             // 
             // lbFullName
             // 
@@ -117,7 +121,7 @@
             // lbReference
             // 
             this.lbReference.AutoSize = true;
-            this.lbReference.Location = new System.Drawing.Point(35, 170);
+            this.lbReference.Location = new System.Drawing.Point(35, 178);
             this.lbReference.Name = "lbReference";
             this.lbReference.Size = new System.Drawing.Size(105, 13);
             this.lbReference.TabIndex = 7;
@@ -126,11 +130,15 @@
             // lbContact
             // 
             this.lbContact.AutoSize = true;
-            this.lbContact.Location = new System.Drawing.Point(35, 254);
+            this.lbContact.Location = new System.Drawing.Point(35, 262);
             this.lbContact.Name = "lbContact";
             this.lbContact.Size = new System.Drawing.Size(44, 13);
             this.lbContact.TabIndex = 8;
             this.lbContact.Text = "Contato";
+            // 
+            // notify
+            // 
+            this.notify.ContainerControl = this;
             // 
             // FormCostumers
             // 
@@ -149,8 +157,10 @@
             this.Controls.Add(this.btnBack);
             this.Name = "FormCostumers";
             this.Text = "Cadastro de clientes";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCostumers_FormClosed);
             this.Load += new System.EventHandler(this.FormCostumers_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCostumers_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.notify)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +178,6 @@
         private System.Windows.Forms.Label lbAddress;
         private System.Windows.Forms.Label lbReference;
         private System.Windows.Forms.Label lbContact;
+        private System.Windows.Forms.ErrorProvider notify;
     }
 }
